@@ -1,24 +1,22 @@
-#ifndef STUDENTCLASS_H
-#define STUDENTCLASS_H
-
+#pragma once
 #include <string>
 using namespace std;
+class StudentClass
+{
+	private:
+		string Name;
+		double FinGrades = 0;
 
-class StudentClass {
-private:
-    string Name;
-    double FinGrades = 0;
+	public:
+		StudentClass(string n);
 
-public:
-    StudentClass(string n);
+		string Student();
 
-    string Student();
+		void AddAverage(double s);
 
-    void AddAverage(double s);
+		double CalAverage(double amount);
 
-    double CalAverage(double amount);
+		string GetLetterAverage(double average);
+	};
 
-    string GetLetterAverage(string Name);
-};
 
-#endif // STUDENTCLASS_H
